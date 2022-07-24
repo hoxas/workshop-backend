@@ -108,6 +108,16 @@ main div label {
     padding-top: 0.25rem !important;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 #form {
     background-color: var(--highlight);
 }
