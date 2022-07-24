@@ -1,7 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+:root {
+    --font: #fff;
+    --primary: #0c0b0c;
+    --secondary: #202020;
+    --highlight: #5e2b77;
+    --light-highlight: #b76bdd;
+    --box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: var(--font);
+}
+
 body {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  align-items: center;
-  box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: var(--secondary);
+}
+
+nav {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    height: 70px;
+    width: 100%;
+    background-color: var(--primary);
+    box-shadow: var(--box-shadow);
+}
+nav img {
+    max-height: 70%;
+    max-width: 70%;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 2rem 1rem;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    background: url("../img/code.png") no-repeat center right;
+    background-attachment: scroll;
+    background-size: auto;
+    background-size: contain;
+    background-attachment: scroll;
+}
+
+header h1 {
+    font-style: bold;
+    font-size: 36px;
+    margin: 0 10rem 0 0;
+    display: block;
+}
+
+@media (max-width: 520px) {
+    header h1 {
+        font-size: 22px;
+    }
+}
+@media (max-width: 670px) {
+    main {
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        height: 200px;
+    }
+}
+
+main {
+    width: 85%;
+    border-radius: 10px;
+    background-color: rgb(20, 19, 19);
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 6rem;
+    box-shadow: var(--box-shadow);
+}
+
+main div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+main div label {
+    text-align: right;
+    white-space: nowrap;
+    padding-top: 0.25rem !important;
+}
+
+#form {
+    background-color: var(--highlight);
+}
+
+main div.form-item {
+    display: flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    padding: 0;
+    box-shadow: var(--box-shadow);
+}
+
+main div.form-item > * {
+    width: 50%;
+    height: 30px;
+    padding: 0 0.5rem;
+}
+
+main div fieldset {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-bottom: 1rem;
+    border: none;
+}
+
+main div legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0.3rem;
+}
+
+main div input {
+    height: 100%;
+    background-color: var(--primary);
+    border: none;
+}
+
+main div button {
+    background-color: var(--primary);
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+#resposta {
+    font-size: 2rem;
+    color: var(--light-highlight);
+}
+
+footer {
+    width: 100%;
+    background-color: var(--primary);
+    text-align: center;
+    font-style: italic;
+    position: fixed;
+    bottom: 0;
+    padding: 1rem;
+}
+
+footer a {
+    color: var(--highlight);
 }
